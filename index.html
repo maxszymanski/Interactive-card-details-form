@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <main class="main">
+    <div class="wrapper">
+      <div class="card">
+        <div class="card__header background">
+          <div class="card__back background">
+            <img src="./images/bg-card-back.png" alt="back side of credit card" class="card__back-img">
+            <p class="card__back-cvc">000</p>
+          </div>
+          <div class="card__front background">
+            <img src="./images/card-logo.svg" alt="" class="card__front-img">
+            <p class="card__front-number">0000 0000 0000 0000</p>
+            <div class="card__front-info">
+              <p class="card__front-name">jane Appleseed</p>
+              <p class="card__front-date">00/00</p>
+            </div>
+          </div>
+        </div>
+        <div class="card__info show">
+          <form action="#" class="card__form">
+            <div class="card__form-info">
+              <label for>cardholder name</label>
+              <input type="text" id="name" placeholder="e.g. Jane Appleseed" class="card__input card__input-name">
+            </div>
+            <div class="card__form-info">
+              <label for="card-number">card number</label>
+              <input type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000"
+                class="card__input card__input-number">
+            </div>
+            <div class="card__form-info">
+                <div class="card__form-info-label">
+                  <label for="card-month">exp. date</label>
+                  <label for="card-year">(mm/yy)</label>
+                  <label for="card-cvc" class="card__form-info-label--cvc">cvc</label>
+                </div>
+                <div class="card__form-info-input">
+                  <input type="text" id="card-month" placeholder="MM" class="card__input card__input--month">
+                  <input type="text" id="card-year" placeholder="YY" class="card__input card__input--year">
+                  <input type="text" id="card-cvc" placeholder="e.g. 123" class="card__input card__input--cvc">
+                </div>
+            </div>
+            <input type="submit" value="Confirm" class="card__form-btn">
+          </form>
+        </div>
+        <div class="confirm hide">
+          <img src="./images/icon-complete.svg" alt="icon" class="confirm__img">
+          <h2 class="confirm__title">thank you!</h2>
+          <p class="confirm__text">We've added your card details</p>
+          <button class="confirm__btn">Continue</button>
+        </div>
+
+      </div>
+
+
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

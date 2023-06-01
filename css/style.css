@@ -1,0 +1,246 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main {
+  height: 100%;
+}
+.main .card {
+  background-color: hsl(0, 0%, 100%);
+  min-width: 375px;
+}
+.main .card__header {
+  background-image: url(../images/bg-main-mobile.png);
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  z-index: 0;
+}
+.main .card__front {
+  position: relative;
+  top: -2em;
+  left: 1em;
+  display: inline-block;
+  width: 285px;
+  height: 160px;
+  padding: 1.2em;
+  color: hsl(270, 3%, 87%);
+  border-radius: 8px;
+  background-image: url(../images/bg-card-front.png);
+  z-index: 11;
+}
+.main .card__front-img {
+  width: 55px;
+  margin-bottom: 2em;
+}
+.main .card__front-number {
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+}
+.main .card__front-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.main .card__back {
+  position: relative;
+  top: 2.5em;
+  left: 4.8em;
+  max-width: 285px;
+  max-height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+}
+.main .card__back-img {
+  width: 100%;
+  height: auto;
+}
+.main .card__back-cvc {
+  position: absolute;
+  top: 5.8em;
+  left: 18.5em;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: hsl(270, 3%, 87%);
+}
+.main .card__info {
+  padding: 1.3em;
+  padding-bottom: 2.5em;
+  margin-top: 5em;
+  width: 100%;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main .card__form {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: 1.5em;
+}
+.main .card__form-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5em;
+  font-size: inherit;
+}
+.main .card__form-info-label {
+  letter-spacing: 1px;
+}
+.main .card__form-info-label--cvc {
+  margin-left: 1em;
+}
+.main .card__form-btn {
+  padding: 1em;
+  margin-top: 0.3em;
+  max-width: 330px;
+  font-size: inherit;
+  color: hsl(270, 3%, 87%);
+  background: hsl(278, 68%, 11%);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.main .card__form-btn:hover {
+  background-color: hsla(278, 68%, 11%, 0.9);
+}
+.main .card__input {
+  padding: 1em;
+  font-size: inherit;
+  border-radius: 8px;
+  border: solid 1px hsl(270, 3%, 87%);
+  max-width: 330px;
+}
+.main .card__input--month {
+  width: 5em;
+  margin-right: 0.3em;
+}
+.main .card__input--year {
+  width: 5em;
+  margin-right: 0.3em;
+}
+.main .card__input--cvc {
+  width: 9.5em;
+}
+.main .card__input:focus {
+  outline: none;
+  border-image-source: linear-gradient(rgb(100, 72, 254), rgb(96, 5, 148));
+  border-width: 2px;
+  border-image-slice: 1;
+}
+.main .confirm {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.3em;
+  padding-bottom: 2.5em;
+  margin-top: 5em;
+}
+.main .confirm__img {
+  margin-bottom: 2em;
+}
+.main .confirm__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5em;
+}
+.main .confirm__text {
+  color: hsl(279, 6%, 55%);
+  margin-bottom: 2.5em;
+  font-size: 1.8rem;
+}
+.main .confirm__btn {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  padding: 1em;
+  font-size: inherit;
+  letter-spacing: 2px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(270, 3%, 87%);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.main .confirm__btn:hover {
+  background-color: hsla(278, 68%, 11%, 0.9);
+}
+
+.show {
+  display: flex !important;
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  margin-top: 20em;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 576px) {
+  .main .card__front {
+    left: 7em;
+  }
+  .main .card__back {
+    left: 11em;
+  }
+}
+@media (min-width: 768px) {
+  .main .card__front {
+    left: 13em;
+  }
+  .main .card__back {
+    left: 17em;
+  }
+}
+@media (min-width: 992px) {
+  .main .card__front {
+    left: 20em;
+  }
+  .main .card__back {
+    left: 24em;
+  }
+}/*# sourceMappingURL=style.css.map */

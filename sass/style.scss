@@ -1,0 +1,254 @@
+@use '_colors' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.6rem;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+.background {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.main {
+	height: 100%;
+	.card {
+		background-color: $white;
+		min-width: 375px;
+		&__header {
+			background-image: url(../images/bg-main-mobile.png);
+			width: 100%;
+			height: auto;
+			max-height: 240px;
+			z-index: 0;
+		}
+		&__front {
+			position: relative;
+			top: -2em;
+			left: 1em;
+			display: inline-block;
+			width: 285px;
+			height: 160px;
+			padding: 1.2em;
+			color: $lightviolet;
+			border-radius: 8px;
+			background-image: url(../images/bg-card-front.png);
+			z-index: 11;
+			&-img {
+				width: 55px;
+				margin-bottom: 2em;
+			}
+			&-number {
+				width: 100%;
+				letter-spacing: 2px;
+				font-size: 1.8rem;
+			}
+			&-info {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 1.2em;
+				font-size: 1.2rem;
+				text-transform: uppercase;
+			}
+		}
+		&__back {
+			position: relative;
+			top: 2.5em;
+			left: 4.8em;
+			max-width: 285px;
+			max-height: 160px;
+			border-radius: 8px;
+			overflow: hidden;
+			z-index: 10;
+			&-img {
+				width: 100%;
+				height: auto;
+			}
+			&-cvc {
+				position: absolute;
+				top: 5.8em;
+				left: 18.5em;
+				font-size: 1.2rem;
+				letter-spacing: 2px;
+				color: $lightviolet;
+			}
+		}
+		&__info {
+			padding: 1.3em;
+			padding-bottom: 2.5em;
+			margin-top: 5em;
+			width: 100%;
+			max-width: 375px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__form {
+			display: flex;
+			flex-direction: column;
+			text-transform: uppercase;
+			gap: 1.5em;
+			&-info {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				gap: 0.5em;
+				font-size: inherit;
+				&-label {
+					letter-spacing: 1px;
+					&--cvc {
+						margin-left: 1em;
+					}
+				}
+			}
+			&-btn {
+				padding: 1em;
+				margin-top: 0.3em;
+				max-width: 330px;
+				font-size: inherit;
+				color: $lightviolet;
+				background: $violet;
+				border: 1px solid transparent;
+				border-radius: 8px;
+				letter-spacing: 1px;
+				cursor: pointer;
+				&:hover {
+					background-color: hsla(278, 68%, 11%, 90%);
+				}
+			}
+		}
+		&__input {
+			padding: 1em;
+			font-size: inherit;
+			border-radius: 8px;
+			border: solid 1px $lightviolet;
+			max-width: 330px;
+			&--month {
+				width: 5em;
+				margin-right: 0.3em;
+			}
+			&--year {
+				width: 5em;
+				margin-right: 0.3em;
+			}
+			&--cvc {
+				width: 9.5em;
+			}
+			&:focus {
+				outline: none;
+				border-image-source: linear-gradient(rgb(100, 72, 254), rgb(96, 5, 148));
+				border-width: 2px;
+				border-image-slice: 1;
+			}
+		}
+	}
+	.confirm {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1.3em;
+		padding-bottom: 2.5em;
+		margin-top: 5em;
+		&__img {
+			margin-bottom: 2em;
+		}
+		&__title {
+			font-size: 3rem;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-bottom: 0.5em;
+		}
+		&__text {
+			color: $darkviolet;
+			margin-bottom: 2.5em;
+			font-size: 1.8rem;
+		}
+		&__btn {
+			position: relative;
+			width: 100%;
+			max-width: 330px;
+			padding: 1em;
+			font-size: inherit;
+			letter-spacing: 2px;
+			border: 1px solid transparent;
+			border-radius: 8px;
+			background-color: $violet;
+			color: $lightviolet;
+			transition: background-color 0.3s;
+			cursor: pointer;
+			&:hover {
+				background-color: hsla(278, 68%, 11%, 90%);
+			}
+		}
+	}
+}
+.show {
+	display: flex !important;
+}
+.hide {
+	display: none;
+}
+
+footer {
+	margin-top: 20em;
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+	}
+	.attribution a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+@media (min-width: 576px) {
+	.main {
+		.card {
+			&__front {
+				left: 7em;
+			}
+			&__back {
+				left: 11em;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.main {
+		.card {
+			&__front {
+				left: 13em;
+			}
+			&__back {
+				left: 17em;
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.main {
+		.card {
+			&__front {
+				left: 20em;
+			}
+			&__back {
+				left: 24em;
+			}
+		}
+	}
+}
