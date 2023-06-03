@@ -137,7 +137,7 @@ const submit = () => {
 		numberInput.classList.add('border-error')
 	}
 	if (numberInput.value.length < 19) {
-		errorNumber.textContent = 'the number must consist of twelve digits'
+		errorNumber.textContent = 'The number must consist of twelve digits'
 		numberInput.classList.add('border-error')
 	}
 	if ((!monthInput.value.match(regexMonth) && monthInput.value !== '') || monthInput.value == '') {
